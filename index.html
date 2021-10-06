@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Application to manage Pizzeria.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pizzeria's CMS</title>
+</head>
+
+<body>
+    <header>
+        <p class="c-header__title">Pizzeria's CMS</p>
+        <button class="c-header__btn js-open-form-btn">Add Pizza</button>
+    </header>
+    <main>
+        <div class="c-filters">
+            Sort By:
+            <button class="c-filters__btn js-sort-by-price">Price</button>
+            <button class="c-filters__btn js-sort-by-hotness">Hotness</button>
+            <button class="c-filters__btn h-active js-sort-by-date">Date</button>
+        </div>
+        <div class="c-render">
+            <button class="c-render__btn js-open-form-btn">Add Pizza</button>
+        </div>
+        <div class="c-popup h-hide">
+            <button class="c-popup__exit js-popup__exit">x</button>
+            <h4 class="c-popup__title">Add a New Pizza</h4>
+            <form class="c-popup__form">
+                <label class="c-popup__label">
+                    Name*:
+                    <input type="text" class="c-popup__text c-popup__name" placeholder="Name" name="name" required
+                        maxlength="30" />
+                </label>
+                <label class="c-popup__label">Price*:
+                    <input class="c-popup__text c-popup__price" type="number" placeholder="0.00" required name="price"
+                        min="0" step="0.01" title="Currency" pattern="^\d+(?:\.\d{1,2})?$"
+                        onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'">
+                </label>
+                <label class="c-popup__label">
+                    Toppings (multiple words - double quotes):
+                    <input class="c-popup__text js-popup__topping" type="text" placeholder="Topping" name="topping"
+                        minlength="2" required />
+                </label>
+                <div class="c-render__toppings"></div>
+                <div class="c-popup__label c-popup__hotness">
+                    Hotness: <br>
+                    <label>
+                        <input class="c-popup__radio" type="radio" name="hotness" value="1" hidden />
+                        <span class="c-popup__overlay c-popup__overlay-normal">Normal - 1</span>
+                    </label>
+                    <label>
+                        <input class="c-popup__radio" type="radio" name="hotness" value="2" hidden />
+                        <span class="c-popup__overlay c-popup__overlay-hot">Hot - 2</span>
+                    </label>
+                    <label>
+                        <input class="c-popup__radio" type="radio" name="hotness" value="3" hidden />
+                        <span class="c-popup__overlay">Hell - 3</span>
+                    </label>
+                </div>
+                <div class="c-popup__label c-popup__hotness">
+                    Photos: <br>
+                    <label>
+                        <input type="radio" name="photo" value="images/pexels-1.jpg" hidden>
+                        <img class="c-popup__photo" src="../images/pexels-1.jpg" width="95" height="95">
+                    </label>
+                    <label>
+                        <input type="radio" name="photo" value="images/pexels-4.jpg" hidden>
+                        <img class="c-popup__photo" src="../images/pexels-4.jpg" width="95" height="95">
+                    </label>
+                    <label>
+                        <input type="radio" name="photo" value="images/pexels-2.jpg" hidden>
+                        <img class="c-popup__photo" src="../images/pexels-2.jpg" width="95" height="95">
+                    </label>
+                    <label>
+                        <input type="radio" name="photo" value="images/pexels-3.jpg" hidden>
+                        <img class="c-popup__photo" src="../images/pexels-3.jpg" width="95" height="95">
+                    </label>
+                </div>
+                <button type="submit" class="c-popup__add-pizza js-popup__add-pizza">Add pizza</button>
+            </form>
+        </div>
+        <div class="c-confirm h-hide">
+            <p>Are you sure you want to delete this menu item?</p>
+            <div class="c-confirm__btns">
+                <button class="c-confirm__keep-btn js-confirm__keep-btn">Keep</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="js/main.js" async defer></script>
+</body>
+
+</html>

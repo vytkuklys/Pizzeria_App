@@ -1,0 +1,420 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background: linear-gradient(to right, #2539FF, #5867FF);
+    height: 5rem;
+    padding: 0 17.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+main {
+    padding-top: 5rem;
+}
+
+.c-render__btn,
+.c-header__btn {
+    background-color: #FFF058;
+    color: #222222;
+    border: none;
+    padding: .65rem 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: .5rem 0 .5rem 0;
+    border: 1.5px solid transparent;
+    font-size: 1rem;
+    font-size: clamp(.8rem, 2.5vw, 1rem);
+    cursor: pointer;
+    transition: border-radius .25s ease-in;
+    white-space: nowrap;
+}
+
+.c-render__btn:hover,
+.c-header__btn:hover {
+    border-radius: 0 .5rem 0 .5rem;
+}
+
+.c-render__btn {
+    margin-top: 10%;
+    font-size: 2rem;
+}
+
+.c-header__title {
+    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    color: #fff;
+}
+
+.c-filters {
+    padding: 1rem 17.5% 0;
+    font-weight: 400;
+    font-size: 1.25rem;
+    font-size: clamp(.9rem, 2.5vw, 1.25rem);
+    text-align: right;
+}
+
+.c-filters__btn {
+    font-size: 1.1rem;
+    font-size: clamp(.9rem, 2.5vw, 1.1rem);
+    border: none;
+    background-color: transparent;
+    color: #222222;
+    border-radius: .5rem 0 .5rem 0;
+    padding: .25rem 1rem;
+    margin-left: .5rem;
+    cursor: pointer;
+    transition: background-color .2s ease-in, color .2s ease-in;
+}
+
+.c-filters__btn:hover {
+    background-color: #2539FF;
+    color: white;
+}
+
+.c-render {
+    margin: 0 auto;
+    padding: 0 7.5% 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    max-width: 2000px;
+}
+
+.c-render__toppings {
+    background-color: #ffffff;
+}
+
+.c-menu {
+    width: 100%;
+    height: 20%;
+    padding: 0 1rem 1rem 0;
+    border-radius: .5rem;
+    max-width: 475px;
+    margin-top: 5%;
+    -webkit-box-shadow: 7px 2px 15px -5px rgba(0, 0, 0, 0.39);
+    box-shadow: 7px 2px 15px -5px rgba(0, 0, 0, 0.39);
+}
+
+.c-menu__photo {
+    height: 150px;
+    width: 175px;
+    background-color: rgb(165, 148, 177);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    border-radius: .5rem 0 .5rem 0;
+    float: left;
+    margin: 0 5% 2.5% 0%;
+}
+
+.c-menu__name {
+    margin-top: .75rem;
+}
+
+.c-menu__chilly {
+    text-indent: 2rem;
+    word-spacing: 2rem;
+}
+
+.c-menu__bottom {
+    display: flex;
+    clear: left;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 0 1rem;
+}
+
+.c-confirm__delete-btn,
+.c-confirm__keep-btn,
+.c-popup__add-pizza,
+.c-menu__btn {
+    clear: left;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    padding: .6rem 2.25rem;
+    background-color: #FF5867;
+    border-radius: 1rem;
+    color: #fff;
+    border: 1px solid #FF5867;
+    cursor: pointer;
+    transition: background-color .2s ease-in, color .2s ease-in, border-color .2s ease-in;
+}
+
+.c-confirm__delete-btn:hover,
+.c-confirm__keep-btn:hover,
+.c-popup__add-pizza:hover,
+.c-menu__btn:hover {
+    background-color: #fff;
+    color: #FF5867;
+}
+
+.c-confirm__keep-btn,
+.c-popup__add-pizza {
+    margin-top: calc(5% - .5rem);
+    font-size: 1rem;
+    background-color: #FFF058;
+    border-color: #FFF058;
+    color: #222222;
+}
+
+.c-confirm__keep-btn:hover,
+.c-popup__add-pizza:hover {
+    border-color: #222222;
+    color: #222222;
+}
+
+.c-menu__name {
+    font-weight: bold;
+    font-size: 1.25rem;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    overflow-wrap: break-word;
+}
+
+.c-menu__toppings {
+    padding: .5rem 0;
+    font-size: 1.05rem;
+    font-size: clamp(.8rem, 2.5vw, 1.05rem);
+    line-height: 1.5;
+    font-weight: 400;
+    overflow-wrap: break-word;
+}
+
+.c-menu__price {
+    text-align: right;
+    font-weight: bold;
+    padding-bottom: .5rem;
+    padding: .6rem 0;
+    font-size: 1rem;
+    font-size: clamp(.9rem, 2.5vw, 1rem);
+}
+
+.h-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(105, 101, 101, 0.829);
+}
+
+@supports ((-webkit-backdrop-filter: blur(.25rem)) or (backdrop-filter: blur(.25rem))) {
+    .h-blur {
+        background-color: rgba(255, 255, 255, .15);
+        -webkit-backdrop-filter: blur(.25rem);
+        backdrop-filter: blur(.25rem);
+    }
+}
+
+.c-confirm,
+.c-popup {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 20;
+    width: 90%;
+    max-width: 525px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #050505;
+    border-radius: .25rem;
+    box-shadow: 0 2.5px 5px 0 #e4e6eb, 0 1px 2px 0 #d8dadf, inset 0 0 0 1px #e4e6eb;
+    padding: 2%;
+}
+
+.c-confirm {
+    text-align: center;
+    font-weight: bold;
+}
+
+.c-confirm__btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.c-confirm__delete-btn,
+.c-confirm__keep-btn {
+    margin: initial;
+}
+
+.c-confirm__keep-btn {
+    background-color: #FFF058;
+    color: #222222;
+}
+
+.c-popup__title {
+    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+    font-weight: 400;
+    margin: 0 0 .75rem;
+    text-align: left;
+    color: #222222;
+}
+
+.c-popup__exit {
+    position: absolute;
+    right: 5%;
+    top: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: .5;
+    color: #222222;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.c-popup__text {
+    padding: .75rem .25rem;
+    width: 100%;
+    border: 1px solid #289c3b50;
+    border-radius: .25rem;
+    text-indent: .5rem;
+    display: block;
+    outline-color: #5867FF;
+}
+
+input::placeholder {
+    font-weight: 200;
+    color: #555555;
+}
+
+.c-popup__label {
+    text-align: left;
+    background-color: #fff;
+    font-weight: 200;
+    padding-bottom: .75rem;
+    line-height: 1.75;
+    font-size: .8rem;
+    display: block;
+}
+
+.c-popup__topping {
+    background-color: #FFF058;
+    background-color: #289c3b50;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    padding: .25rem .5rem;
+    transition: background-color .2s ease-in, color .2s ease-in;
+    margin: 0 .25rem .25rem 0;
+}
+
+.c-popup__topping:hover {
+    background-color: #cb0602;
+    color: white;
+}
+
+.c-popup__overlay {
+    background-color: #cb0602;
+    border-radius: 1rem;
+    border-radius: .5rem 0 .5rem 0;
+    padding: .1rem 0;
+    text-align: center;
+    min-width: 6rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-block;
+    border: 2px solid transparent;
+    margin-right: 1%;
+    cursor: pointer;
+    transition: border-radius .25s ease-in, border-color .2s ease-in;
+}
+
+.c-popup__overlay:hover {
+    border-radius: 0 .5rem 0 .5rem;
+}
+
+input[type="radio"]:checked+.c-popup__overlay {
+    border-color: #222222;
+    border-radius: .5rem 0 .5rem 0;
+}
+
+.c-popup__overlay-normal {
+    background-color: #ffb300;
+}
+
+.c-popup__overlay-hot {
+    background-color: #fe6b1e;
+}
+
+.c-popup__photo {
+    border: 2px solid #5867FF;
+    opacity: .5;
+    border-radius: .5rem 0 .5rem 0;
+    transition: opacity .25s ease-in;
+    margin-right: 1%;
+    cursor: pointer;
+}
+
+.c-popup__photo:hover {
+    opacity: .75;
+}
+
+input[type="radio"]:checked+.c-popup__photo {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 725px) {
+    header {
+        padding: 0 5%;
+    }
+
+    .c-filters {
+        padding: 1rem 5% 0;
+    }
+
+    .c-filters__btn {
+        padding: .25rem 2.5%;
+    }
+
+    .c-menu__photo {
+        height: 100px;
+        width: 100px;
+        margin: 0 5% 2.5% 0%;
+    }
+
+    .c-confirm__delete-btn,
+    .c-confirm__keep-btn,
+    .c-popup__add-pizza,
+    .c-menu__btn {
+        padding: .35rem 1.5rem;
+    }
+
+    .c-popup {
+        padding: 5% 3%;
+    }
+}
+
+.h-hide {
+    display: none !important;
+}
+
+.c-popup__form {
+    background-color: #ffffff !important;
+}
+
+.h-active {
+    background-color: #2539FF !important;
+    color: #ffffff !important;
+}
