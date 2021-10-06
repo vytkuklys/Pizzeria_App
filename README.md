@@ -1,4 +1,4 @@
-# Pizzeria App
+# Pizzeria App :pizza:
 
 ## An application to manage a Pizzeria allows you to comfortably
 
